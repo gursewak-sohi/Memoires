@@ -1200,11 +1200,16 @@ aside {
   background-repeat: no-repeat;
   background-position: center right 10px;
   font-size: 13px;
+  color: #4F4B47;
+  outline: none;
 }
 @media (max-width: 1023px) {
   .details-content .select select {
     padding: 9.5px 10px;
   }
+}
+.details-content .select select:focus {
+  outline: none;
 }
 .details-content .product-more {
   margin-top: 34px;
