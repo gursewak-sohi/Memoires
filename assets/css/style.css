@@ -1696,6 +1696,7 @@ aside {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: 300ms background-color ease, 300ms color ease, 300ms border-color ease, 300ms opacity ease;
+  border-radius: 0;
 }
 .form-content .form-unit input:focus {
   border: 1px solid black;
@@ -1763,6 +1764,7 @@ aside {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: 300ms background-color ease, 300ms color ease, 300ms border-color ease, 300ms opacity ease;
+  border-radius: 0;
   flex: 3;
 }
 .discout-block .discout-field input:focus {

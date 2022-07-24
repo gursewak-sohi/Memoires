@@ -183,6 +183,7 @@
             background-color: transparent;
             border: 1px solid rgba($black, 10%);
             transition: $btn-transition;
+            border-radius: 0;
             &:focus {
                 border: 1px solid rgba($black, 100%);
             }
@@ -242,6 +243,7 @@
             background-color: transparent;
             border: 1px solid rgba($black, 10%);
             transition: $btn-transition;
+            border-radius: 0;
             flex: 3;
             &:focus {
                 border: 1px solid rgba($gray-800, 100%);
