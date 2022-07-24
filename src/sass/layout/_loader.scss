@@ -1,0 +1,43 @@
+// Loader SCSS
+.loading-section {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    transition: 400ms all ease;
+}
+
+.loaded {
+    & .loading-section {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading-block {
+    display: flex;
+    align-items: center;
+    & img {
+        &:first-child {
+            margin-right: 25px;
+            @include tablet {
+                margin-right: 20px;
+            }
+        }
+        &:nth-child(2) {
+            width: 180px;
+            @include tablet {
+                width: 160px;
+                height: 27px;
+            }
+        }
+    }
+}

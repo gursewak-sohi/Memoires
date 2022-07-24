@@ -6,17 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Mémoires</title>
-    <!-- <link rel="shortcut icon" href="assets/images/svg/favicon.svg" /> -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg" />
     <!-- Bundle CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
+
+    <!-- Loading Section -->
+    <section class="loading-section">
+        <div class="loading-block">
+            <img src="assets/images/loading.svg" width="38" height="38" alt="loading" />
+            <img src="assets/images/logo.svg" width="180" height="31" alt="logo" />
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main>
         <!-- Header Content -->
         <header>
-            <div class="header-block">
+            <div class="header-block animate-down">
                 <button type="button" class="btn-menu" onclick="openMenu()">
                     <img src="assets/images/icons/menu.svg" alt="menu" />
                 </button>
@@ -33,11 +42,11 @@
                         <img src="assets/images/icons/arrow-left.svg" alt="icon" /> Menu inklappen
                     </button>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Over</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li class="active"><a href="contact.html">Contact</a></li>
-                        <li><a href="cart.html">Winkelmand</a></li>
+                        <li class="animate-up"><a href="index.html">Home</a></li>
+                        <li class="animate-up"><a href="about.html">Over</a></li>
+                        <li class="animate-up"><a href="shop.html">Shop</a></li>
+                        <li class="animate-up active"><a href="contact.html">Contact</a></li>
+                        <li class="animate-up"><a href="cart.html">Winkelmand</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +55,7 @@
 
         <!-- Contact Section -->
         <section class="contact-section">
-            <div class="contact-block">
+            <div class="contact-block animate-up">
                 <p>Contact</p>
                 <p>Neem contact met ons op voor vragen. We zullen binnen 24 uur reageren op mails van maandag tot vrijdag.</p>
                 <p>Telefoon: +31 6 12345678 <br>Mail: <a href="mailto:info@memoireslingerie.nl">info@memoireslingerie.nl</a></p>
@@ -119,7 +128,9 @@
     </main>
 </body>
 
-
+<!--  Scroll reveal JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 <!-- Custom JS -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 

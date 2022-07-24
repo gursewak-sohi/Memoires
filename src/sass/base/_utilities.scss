@@ -2,6 +2,10 @@
 body {
     scrollbar-width: thin;
     background-color: $primary;
+    overflow: hidden;
+    &.loaded {
+        overflow: auto;
+    }
 }
 
 main {
@@ -47,4 +51,27 @@ main {
     &.active .collapse-arrow {
         transform: rotate(-180deg);
     }
+}
+
+.animate-down {
+    opacity: 0;
+    transform: translateY(-32px);
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(32px);
+}
+
+.animate-blur {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.animate-left {
+    transform: translateX(-32px);
+}
+
+.animate-right {
+    transform: translateX(32px);
 }

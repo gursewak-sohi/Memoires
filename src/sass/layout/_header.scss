@@ -178,7 +178,7 @@ header {
                 & a {
                     color: $gray-800;
                     &::after {
-                        width: 100%;
+                        animation: widthInc 0.6s ease forwards 1.4s;
                     }
                 }
             }

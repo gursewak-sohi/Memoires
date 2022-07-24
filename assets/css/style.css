@@ -416,19 +416,21 @@ p {
   }
 }
 
-@keyframes fadeIn {
+@keyframes widthInc {
   0% {
-    opacity: 0;
-    visibility: hidden;
+    width: 0;
   }
   100% {
-    opacity: 1;
-    visibility: visible;
+    width: 100%;
   }
 }
 body {
   scrollbar-width: thin;
   background-color: #FBF1EA;
+  overflow: hidden;
+}
+body.loaded {
+  overflow: auto;
 }
 
 main {
@@ -476,6 +478,29 @@ main.home-page {
 }
 [data-toggler].active .collapse-arrow {
   transform: rotate(-180deg);
+}
+
+.animate-down {
+  opacity: 0;
+  transform: translateY(-32px);
+}
+
+.animate-up {
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.animate-blur {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.animate-left {
+  transform: translateX(-32px);
+}
+
+.animate-right {
+  transform: translateX(32px);
 }
 
 button {
@@ -548,6 +573,49 @@ button {
 }
 .swiper-button-next::after {
   background-image: url(../../assets/images/icons/slide-right.svg);
+}
+
+.loading-section {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FBF1EA;
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+  transition: 400ms all ease;
+}
+
+.loaded .loading-section {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loading-block {
+  display: flex;
+  align-items: center;
+}
+.loading-block img:first-child {
+  margin-right: 25px;
+}
+@media (max-width: 1023px) {
+  .loading-block img:first-child {
+    margin-right: 20px;
+  }
+}
+.loading-block img:nth-child(2) {
+  width: 180px;
+}
+@media (max-width: 1023px) {
+  .loading-block img:nth-child(2) {
+    width: 160px;
+    height: 27px;
+  }
 }
 
 header {
@@ -750,7 +818,7 @@ header {
   color: #4F4B47;
 }
 .menu ul li.active a::after {
-  width: 100%;
+  animation: widthInc 0.6s ease forwards 1.4s;
 }
 
 .checkout-page .menu {
@@ -1054,6 +1122,7 @@ aside {
   height: 282px;
   object-fit: cover;
   margin-bottom: 11px;
+  overflow: hidden;
 }
 @media (max-width: 1023px) {
   .product-unit .product-image {
@@ -1065,6 +1134,10 @@ aside {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 600ms all ease;
+}
+.product-unit:hover .product-image img {
+  transform: scale(1.2);
 }
 .product-unit .product-content {
   display: flex;

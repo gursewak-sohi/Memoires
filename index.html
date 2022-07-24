@@ -6,18 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Mémoires</title>
-    <!-- <link rel="shortcut icon" href="assets/images/svg/favicon.svg" /> -->
+    <link rel="shortcut icon" href="assets/images/favicon.svg" />
     <!-- Bundle CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
 
+    <!-- Loading Section -->
+    <section class="loading-section">
+        <div class="loading-block">
+            <img src="assets/images/loading.svg" width="38" height="38" alt="loading" />
+            <img src="assets/images/logo.svg" width="180" height="31" alt="logo" />
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="home-page">
         <!-- Header Content -->
         <header>
-            <div class="header-block">
+            <div class="header-block animate-down">
                 <button type="button" class="btn-menu" onclick="openMenu()">
                     <img src="assets/images/icons/menu.svg" alt="menu" />
                 </button>
@@ -34,18 +42,18 @@
                         <img src="assets/images/icons/arrow-left.svg" alt="icon" /> Menu inklappen
                     </button>
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Over</a></li>
-                        <li><a href="shop.html">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="cart.html">Winkelmand</a></li>
+                        <li class="animate-up active"><a href="index.html">Home</a></li>
+                        <li class="animate-up"><a href="about.html">Over</a></li>
+                        <li class="animate-up"><a href="shop.html">Shop</a></li>
+                        <li class="animate-up"><a href="contact.html">Contact</a></li>
+                        <li class="animate-up"><a href="cart.html">Winkelmand</a></li>
                     </ul>
                 </div>
             </div>
         </header>
 
         <!-- Home Section -->
-        <section class="home-section">
+        <section class="home-section animate-up">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur mi, et fringilla erat posuere et. Cras in mollis metus, eu elementum nulla. Proin eu pulvinar odio, nec auctor eros. In eget justo rhoncus velit mattis sollicitudin.
                 Nunc neque ex, eleifend id vehicula nec, efficitur rhoncus sapien. Mauris scelerisque nibh arcu, vitae molestie dolor bibendum sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum
                 turpis in mauris imperdiet, eu bibendum arcu hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu est nec risus semper porttitor. Phasellus a sem a elit consectetur interdum.</p>
@@ -53,7 +61,7 @@
 
         <!-- Sidebar Section -->
         <aside>
-            <div class="swiper" id="sidebarSwiper">
+            <div class="swiper animate-up" id="sidebarSwiper">
                 <div class="swiper-wrapper aside-block">
                     <div class="swiper-slide">
                         <img src="assets/images/product/product-1.jpg" width="282" height="234" alt="image" />
@@ -137,6 +145,11 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!--  Scroll reveal JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
 <!-- Custom JS -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 

@@ -1,7 +1,65 @@
 (function() {
     // JS loaded
-    let body = document.body;
-    body.classList.add('loaded');
+    setTimeout(() => {
+        let body = document.body;
+        body.classList.add('loaded');
+
+        // gsap animations
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.defaults({
+            toggleActions: "play none none none",
+            start: "top 90%",
+        });
+
+        const animationUp = document.querySelectorAll('.animate-up');
+        if (animationUp) {
+            ScrollTrigger.batch(".animate-up", {
+                onEnter: elements => {
+                    gsap.to(elements, {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.8,
+                        ease: "power4.out",
+                        stagger: 0.1
+                    });
+                },
+                once: false
+            });
+        }
+
+        const animationDown = document.querySelectorAll('.animate-down');
+        if (animationDown) {
+            ScrollTrigger.batch(".animate-down", {
+                onEnter: elements => {
+                    gsap.to(elements, {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 0.8,
+                        ease: "power4.out",
+                        stagger: 0.1
+                    });
+                },
+                once: false
+            });
+        }
+
+        const animationBlur = document.querySelectorAll('.animate-blur');
+        if (animationBlur) {
+            ScrollTrigger.batch(".animate-blur", {
+                onEnter: elements => {
+                    gsap.to(elements, {
+                        autoAlpha: 1,
+                        'filter': 'blur(0)',
+                        duration: 0.8,
+                        ease: "power4.out",
+                        stagger: 0.1
+                    });
+                },
+                once: false
+            });
+        }
+
+    }, "500")
 
     // Sidebar Swiper
     const sidebarSwiperID = document.getElementById('sidebarSwiper');
@@ -99,6 +157,8 @@
             }
         }
     }
+
+
 
 })();
 
