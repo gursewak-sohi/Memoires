@@ -1,0 +1,50 @@
+//  Ulilites SCSS
+body {
+    scrollbar-width: thin;
+    background-color: $primary;
+}
+
+main {
+    max-width: $container;
+    margin: 0 auto;
+    position: relative;
+    border-left: 1px solid rgba($gray-800, 30%);
+    border-right: 1px solid rgba($gray-800, 30%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        border: none;
+    }
+    &.home-page {
+        padding-right: 391px;
+        @include tablet {
+            padding-right: 0;
+        }
+    }
+}
+
+.text-danger {
+    color: $danger;
+}
+
+.text-success {
+    color: $success;
+}
+
+.collapse {
+    overflow: hidden;
+    transition: height 200ms ease-out;
+    &:not(.active) {
+        height: 0;
+    }
+}
+
+[data-toggler] {
+    & .collapse-arrow {
+        transition: transform 200ms ease;
+    }
+    &.active .collapse-arrow {
+        transform: rotate(-180deg);
+    }
+}

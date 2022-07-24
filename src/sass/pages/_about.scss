@@ -1,0 +1,41 @@
+// About SCSS
+.about-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include tablet {
+        align-items: flex-start;
+    }
+}
+
+.about-block {
+    padding: 71px 121px 71px 71px;
+    display: grid;
+    grid-template-columns: 298px 423px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    @include tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 40px 34px 55px;
+    }
+    & .about-image {
+        width: 298px;
+        height: 359px;
+        @include tablet {
+            width: 345px;
+            height: 416px;
+            max-width: 100%;
+        }
+        & img {
+            @extend %object-cover;
+        }
+    }
+    & .about-text {
+        text-align: justify;
+        @include tablet {
+            margin-bottom: 45px;
+        }
+    }
+}

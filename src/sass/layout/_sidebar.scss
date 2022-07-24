@@ -1,0 +1,55 @@
+// Sidebar SCSS
+aside {
+    width: 391px;
+    position: absolute;
+    border-left: 1px solid rgba($gray-800, 30%);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    z-index: 90;
+    @include tablet {
+        position: static;
+        width: 100%;
+        border-left: none;
+        z-index: 10;
+    }
+}
+
+.aside-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 234px;
+    height: 100vh;
+    @include tablet {
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        margin-top: 37px;
+        margin-bottom: 37px;
+    }
+    & .swiper-slide {
+        height: 317px;
+        @include tablet {
+            width: 262px;
+            height: 282px;
+        }
+        &:first-child {
+            margin-top: 56px;
+            @include tablet {
+                margin-left: 34px;
+                margin-top: 0;
+            }
+        }
+        & img {
+            width: 100%;
+            height: 282px;
+            object-fit: cover;
+            @include tablet {
+                width: 234px;
+            }
+        }
+    }
+}

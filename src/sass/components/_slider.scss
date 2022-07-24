@@ -1,0 +1,43 @@
+// Swiper Slider SCSS
+.swiper-button-prev,
+.swiper-button-next {
+    width: 18px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $btn-transition;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    background-color: rgba($primary, 70%);
+    &:hover {
+        background-color: rgba($primary, 100%);
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        inset: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 20;
+    }
+}
+
+.swiper-button-prev {
+    left: 0;
+    &::after {
+        background-image: url(../../assets/images/icons/slide-left.svg);
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+    &::after {
+        background-image: url(../../assets/images/icons/slide-right.svg);
+    }
+}

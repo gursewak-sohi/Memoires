@@ -1,0 +1,132 @@
+// Cart SCSS
+.cart-section {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($black, 0.3);
+    z-index: 90;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 34px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s all ease;
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        & .cart-block {
+            transform: translateX(0);
+        }
+    }
+}
+
+.cart-block {
+    transition: 0.3s all ease;
+    transform: translateX(100%);
+    background-color: $primary;
+    padding: 165px 75px 128px;
+    position: relative;
+    width: 541px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    @include tablet {
+        width: 100%;
+        row-gap: 40px;
+        max-width: 380px;
+        padding: 116px 36px 40px;
+    }
+}
+
+.cart-header {
+    position: relative;
+    & .btn-close {
+        padding: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        bottom: 80px;
+        right: -5px;
+        display: flex;
+        @include tablet {
+            bottom: 60px;
+        }
+        & img {
+            @include tablet {
+                width: 14px;
+            }
+        }
+    }
+}
+
+.cart-body {
+    max-height: 334px;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+.cart-unit {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    & .cart-image {
+        width: 165px;
+        height: 199px;
+        margin-right: 40px;
+        @include tablet {
+            margin-right: 20px;
+        }
+        & img {
+            @extend %object-cover;
+        }
+    }
+    & .product-price {
+        margin-bottom: 20px;
+    }
+    & .btn-remove {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        line-height: 22px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 13px;
+        color: $gray-800;
+        & img {
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
+.cart-footer {
+    display: flex;
+    flex-direction: column;
+    & .product-total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
+    & .product-link {
+        margin-top: 15px;
+        text-align: center;
+        & a {
+            color: $gray-800;
+        }
+    }
+    & .btn-primary {
+        padding: 4.5px 16px;
+        @include tablet {
+            padding: 8.5px 16px;
+        }
+    }
+}

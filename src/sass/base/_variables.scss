@@ -1,0 +1,26 @@
+// Variable SCSS
+// Fonts
+$font-karla: ('Karla', sans-serif);
+// Colors
+$primary: #FBF1EA;
+$gray-800: #4F4B47;
+$link: #B3ABA4;
+$black: #000000;
+$danger: #A3431D;
+$success: #459855;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 1023px;
+$laptop-width: 1150px;
+$desktop-width: 1399px;
+// Container Sizes
+$container: 1050px;
+$gutter-x: 32px;
+$gutter-x-xs: 16px;
+// Transition
+$link-transition: 300ms color ease,
+300ms opacity ease;
+$btn-transition: 300ms background-color ease,
+300ms color ease,
+300ms border-color ease,
+300ms opacity ease;

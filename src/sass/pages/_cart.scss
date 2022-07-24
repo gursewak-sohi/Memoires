@@ -1,0 +1,182 @@
+// Cart SCSS
+.store-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include tablet {
+        align-items: flex-start;
+    }
+}
+
+.store-block {
+    padding: 42px 80px 42px 71px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @include tablet {
+        flex-direction: column;
+        padding: 24px 34px 66px;
+    }
+}
+
+.store-list-block {
+    flex: 1;
+    max-width: 438px;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        max-width: 100%;
+        margin-bottom: 45px;
+    }
+    & h5 {
+        margin-bottom: 17px;
+    }
+}
+
+.price-block {
+    flex: 1;
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+        max-width: 100%;
+    }
+    & h5 {
+        margin-bottom: 17px;
+    }
+}
+
+.store-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    & .store-unit {
+        width: 100%;
+        display: flex;
+        border: 1px solid rgba($gray-800, 30%);
+        align-items: center;
+        position: relative;
+        & .store-image {
+            width: 150px;
+            height: 180px;
+            flex-shrink: 0;
+            margin-right: 26px;
+            & img {
+                @extend %object-cover;
+            }
+        }
+        & .product-price {
+            margin-bottom: 8px;
+        }
+        & .product-color {
+            margin-bottom: 17px;
+        }
+        & .old-price {
+            margin-right: 6px;
+            position: relative;
+            &:before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 50%;
+                right: 0;
+                border-top: 1px solid;
+                border-color: inherit;
+                transform: rotate(-10deg);
+            }
+        }
+        & .btn-remove {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            line-height: 22px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #4F4B47;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            @include tablet {
+                top: 12px;
+                right: 12px;
+            }
+            & img {
+                width: 8px;
+                height: 8px;
+                position: relative;
+                top: 1px;
+                margin-right: 2px;
+                @include tablet {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            & span {
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.product-count {
+    width: 56px;
+    height: 26px;
+    border: 1px solid $gray-800;
+    display: flex;
+    align-items: center;
+    @include tablet {
+        width: 64px;
+    }
+    & button {
+        flex: 1;
+        font-size: 13px;
+        color: $gray-800;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 100%;
+    }
+    & span {
+        font-size: 14px;
+    }
+}
+
+.price-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba($gray-800, 30%);
+    width: 100%;
+    padding: 32px 36px;
+    margin-bottom: 20px;
+    @include tablet {
+        padding: 30px 25px 32px;
+        margin-bottom: 15px;
+    }
+    & .sub-total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 11px;
+    }
+    & .dispatch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba($black, 30%);
+        margin-bottom: 22px;
+    }
+    & .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    & .btn-primary {
+        padding: 9.5px 16px;
+        margin-top: 28px;
+    }
+}

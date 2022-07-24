@@ -1,0 +1,9 @@
+// Fonts SCSS
+@font-face {
+    font-family: 'Karla';
+    src: url('../fonts/karla/Karla-Regular.eot');
+    src: url('../fonts/karla/Karla-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/karla/Karla-Regular.woff2') format('woff2'), url('../fonts/karla/Karla-Regular.woff') format('woff'), url('../fonts/karla/Karla-Regular.ttf') format('truetype'), url('../fonts/karla/Karla-Regular.svg#Karla-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

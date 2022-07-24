@@ -1,0 +1,27 @@
+// Contact SCSS
+.contact-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 34px;
+}
+
+.contact-block {
+    max-width: 336px;
+    & p {
+        &:first-child {
+            display: none;
+            @include tablet {
+                display: block;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+        & a {
+            color: $gray-800;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Mémoires</title>
+    <!-- <link rel="shortcut icon" href="assets/images/svg/favicon.svg" /> -->
+    <!-- Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main>
+        <!-- Header Content -->
+        <header>
+            <div class="header-block">
+                <button type="button" class="btn-menu" onclick="openMenu()">
+                    <img src="assets/images/icons/menu.svg" alt="menu" />
+                </button>
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" width="1100" height="191" alt="icon" />
+                </a>
+                <button type="button" class="btn-cart" onclick="openCart()">
+                    <img src="assets/images/icons/cart.svg" alt="cart" /> 
+                </button>
+            </div>
+            <div id="menuItem" class="menu-block">
+                <div class="menu">
+                    <button class="menu-header" onclick="closeMenu()">
+                        <img src="assets/images/icons/arrow-left.svg" alt="icon" /> Menu inklappen
+                    </button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="active"><a href="about.html">Over</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Winkelmand</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="about-block">
+                <div class="about-image">
+                    <img src="assets/images/product/product-2.jpg" width="298" height="359" alt="">
+                </div>
+                <div class="about-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus efficitur mi, et fringilla erat posuere et. Cras in mollis metus, eu elementum nulla. Proin eu pulvinar odio, nec auctor eros. In eget justo rhoncus velit mattis sollicitudin. Nunc
+                    neque ex, eleifend id vehicula nec, efficitur rhoncus sapien. Mauris scelerisque nibh arcu, vitae molestie dolor bibendum sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum turpis
+                    in mauris imperdiet, eu bibendum arcu hendrerit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec eu est nec risus semper porttitor. Phasellus a sem a elit consectetur interdum. Class aptent
+                    taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum turpis in mauris imperdiet, eu bibendum arcu hendrerit.
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Cart Section -->
+        <section id="cartItem" class="cart-section">
+            <div class="cart-block">
+                <div class="cart-header">
+                    <button onclick="closeCart()" class="btn-close">
+                        <img src="assets/images/icons/close.svg" alt="icon"/>
+                    </button>
+                    <h3>Winkelmand (2)</h3>
+                </div>
+                <div class="cart-body">
+                    <div class="cart-unit">
+                        <div class="cart-image">
+                            <img src="assets/images/product/product-1.jpg" width="165" height="199" alt="image" />
+                        </div>
+                        <div class="cart-content">
+                            <div class="product-name">Productnaam</div>
+                            <div class="product-price">€80</div>
+                            <div class="product-size">Maat: M</div>
+                            <div class="product-number">Aantal: 1</div>
+                            <button class="btn-remove">
+                                <img src="assets/images/icons/remove.svg" alt="icon"/> Verwijderen
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-unit">
+                        <div class="cart-image">
+                            <img src="assets/images/product/product-2.jpg" width="165" height="199" alt="image" />
+                        </div>
+                        <div class="cart-content">
+                            <div class="product-name">Productnaam</div>
+                            <div class="product-price">€80</div>
+                            <div class="product-size">Maat: M</div>
+                            <div class="product-number">Aantal: 1</div>
+                            <button class="btn-remove">
+                                <img src="assets/images/icons/remove.svg" alt="icon"/> Verwijderen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-footer">
+                    <div class="product-total">
+                        <span>Subtotaal</span>
+                        <span>€160</span>
+                    </div>
+                    <a href="checkout.html" class="btn-primary">Ga verder naar afrekenen</a>
+                    <div class="product-link">
+                        <a href="cart.html">Bekijk winkelmand</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer Content -->
+        <footer>
+            <p>© Mémoires</p>
+            <ul>
+                <li><a href="javascript:;">Levering & retour</a></li>
+                <li><a href="javascript:;">Algemene voorwaarden</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+
+<!-- Custom JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>

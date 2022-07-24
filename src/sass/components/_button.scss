@@ -1,0 +1,21 @@
+//  Button SCSS
+.btn-primary {
+    border: 1px solid $gray-800;
+    background-color: $gray-800;
+    width: 100%;
+    text-align: center;
+    color: $primary;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: $btn-transition;
+    font-size: 13px;
+    &:hover {
+        background-color: darken($gray-800, 5%);
+        border-color: darken($gray-800, 5%);
+        color: $primary;
+    }
+    @include tablet {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}

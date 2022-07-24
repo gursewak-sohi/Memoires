@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Mémoires</title>
+    <!-- <link rel="shortcut icon" href="assets/images/svg/favicon.svg" /> -->
+    <!-- Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <!-- Main Content -->
+    <main>
+        <!-- Header Content -->
+        <header>
+            <div class="header-block">
+                <button type="button" class="btn-menu" onclick="openMenu()">
+                    <img src="assets/images/icons/menu.svg" alt="menu" />
+                </button>
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" width="1100" height="191" alt="icon" />
+                </a>
+                <button type="button" class="btn-cart" onclick="openCart()">
+                    <img src="assets/images/icons/cart.svg" alt="cart" /> 
+                </button>
+            </div>
+            <div id="menuItem" class="menu-block">
+                <div class="menu">
+                    <button class="menu-header" onclick="closeMenu()">
+                        <img src="assets/images/icons/arrow-left.svg" alt="icon" /> Menu inklappen
+                    </button>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Over</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="cart.html">Winkelmand</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Cart Page Section -->
+        <section class="store-section">
+            <div class="store-block">
+                <div class="store-list-block">
+                    <h5>Winkelmand</h5>
+                    <div class="store-list">
+                        <div class="store-unit">
+                            <div class="store-image">
+                                <img src="assets/images/product/product-1.jpg" width="150" height="180" alt="image" />
+                            </div>
+                            <div class="store-content">
+                                <div class="product-name">Productnaam</div>
+                                <div class="product-price"><span class="old-price">€ 370</span><span class="text-danger">€ 299</span></div>
+                                <div class="product-size">Maat: M</div>
+                                <div class="product-color">Kleur: Black</div>
+                                <div class="product-count">
+                                    <button>-</button>
+                                    <span>1</span>
+                                    <button>+</button>
+                                </div>
+                                <button class="btn-remove">
+                                    <img src="assets/images/icons/remove.svg" alt="icon"/> <span>Verwijderen</span> 
+                                </button>
+                            </div>
+                        </div>
+                        <div class="store-unit">
+                            <div class="store-image">
+                                <img src="assets/images/product/product-1.jpg" width="150" height="180" alt="image" />
+                            </div>
+                            <div class="store-content">
+                                <div class="product-name">Productnaam</div>
+                                <div class="product-price"><span class="old-price">€ 370</span><span class="text-danger">€ 299</span></div>
+                                <div class="product-size">Maat: M</div>
+                                <div class="product-color">Kleur: Black</div>
+                                <div class="product-count">
+                                    <button>-</button>
+                                    <span>1</span>
+                                    <button>+</button>
+                                </div>
+                                <button class="btn-remove">
+                                    <img src="assets/images/icons/remove.svg" alt="icon"/> <span>Verwijderen</span> 
+                                </button>
+                            </div>
+                        </div>
+                        <div class="store-unit">
+                            <div class="store-image">
+                                <img src="assets/images/product/product-1.jpg" width="150" height="180" alt="image" />
+                            </div>
+                            <div class="store-content">
+                                <div class="product-name">Productnaam</div>
+                                <div class="product-price"><span>€ 120</span></div>
+                                <div class="product-size">Maat: M</div>
+                                <div class="product-color">Kleur: Black</div>
+                                <div class="product-count">
+                                    <button>-</button>
+                                    <span>1</span>
+                                    <button>+</button>
+                                </div>
+                                <button class="btn-remove">
+                                    <img src="assets/images/icons/remove.svg" alt="icon"/> <span>Verwijderen</span> 
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-block">
+                    <h5>Totaalprijs</h5>
+                    <div class="price-content">
+                        <div class="sub-total">
+                            <span>Subtotaal</span>
+                            <span>€ 380</span>
+                        </div>
+                        <div class="dispatch">
+                            <span>Verzending</span>
+                            <span class="text-success">Gratis</span>
+                        </div>
+                        <div class="total">
+                            <span>Totaalprijs (inclusief btw)</span>
+                            <span>€ 380</span>
+                        </div>
+                        <a href="checkout.html" class="btn-primary">Ga verder naar afrekenen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Cart Section -->
+        <section id="cartItem" class="cart-section">
+            <div class="cart-block">
+                <div class="cart-header">
+                    <button onclick="closeCart()" class="btn-close">
+                        <img src="assets/images/icons/close.svg" alt="icon"/>
+                    </button>
+                    <h3>Winkelmand (2)</h3>
+                </div>
+                <div class="cart-body">
+                    <div class="cart-unit">
+                        <div class="cart-image">
+                            <img src="assets/images/product/product-1.jpg" width="165" height="199" alt="image" />
+                        </div>
+                        <div class="cart-content">
+                            <div class="product-name">Productnaam</div>
+                            <div class="product-price">€80</div>
+                            <div class="product-size">Maat: M</div>
+                            <div class="product-number">Aantal: 1</div>
+                            <button class="btn-remove">
+                                <img src="assets/images/icons/remove.svg" alt="icon"/> Verwijderen
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cart-unit">
+                        <div class="cart-image">
+                            <img src="assets/images/product/product-2.jpg" width="165" height="199" alt="image" />
+                        </div>
+                        <div class="cart-content">
+                            <div class="product-name">Productnaam</div>
+                            <div class="product-price">€80</div>
+                            <div class="product-size">Maat: M</div>
+                            <div class="product-number">Aantal: 1</div>
+                            <button class="btn-remove">
+                                <img src="assets/images/icons/remove.svg" alt="icon"/> Verwijderen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-footer">
+                    <div class="product-total">
+                        <span>Subtotaal</span>
+                        <span>€160</span>
+                    </div>
+                    <a href="checkout.html" class="btn-primary">Ga verder naar afrekenen</a>
+                    <div class="product-link">
+                        <a href="cart.html">Bekijk winkelmand</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer Content -->
+        <footer>
+            <p>© Mémoires</p>
+            <ul>
+                <li><a href="javascript:;">Levering & retour</a></li>
+                <li><a href="javascript:;">Algemene voorwaarden</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+
+<!-- Custom JS -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</html>

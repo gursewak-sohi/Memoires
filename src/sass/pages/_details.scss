@@ -1,0 +1,125 @@
+// Details SCSS
+.details-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include tablet {
+        align-items: flex-start;
+    }
+}
+
+.details-block {
+    display: flex;
+    flex-direction: column;
+    padding: 58px 164px 85px 73px;
+    @include tablet {
+        padding: 23px 0 100px 0;
+    }
+    & .details-header {
+        display: flex;
+        margin-bottom: 15px;
+        @include tablet {
+            margin-bottom: 25px;
+            padding-left: 34px;
+        }
+        & a {
+            font-size: 11px;
+            @include tablet {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+.details-body {
+    display: grid;
+    grid-template-columns: 349px 309px;
+    column-gap: 155px;
+    @include tablet {
+        display: block;
+    }
+    & .details-swiper {
+        @include tablet {
+            margin-bottom: 35px;
+        }
+        & .swiper-slide {
+            @include tablet {
+                max-width: 354px;
+            }
+            @include mobile {
+                max-width: calc(100% - 60px);
+            }
+            &:first-child {
+                @include tablet {
+                    margin-left: 34px;
+                }
+            }
+        }
+        & img {
+            width: 349px;
+            height: 421px;
+            object-fit: cover;
+            @include tablet {
+                width: 344px;
+                height: 414px;
+            }
+            @include mobile {
+                width: calc(100% - 10px);
+            }
+        }
+        & .swiper-button-prev,
+        & .swiper-button-next {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet {
+        padding: 0 34px;
+    }
+    & .product-price {
+        margin-bottom: 34px;
+    }
+    & .product-description {
+        line-height: 19px;
+        text-align: justify;
+    }
+    & .select {
+        margin-top: 26px;
+        margin-bottom: 10px;
+        @include tablet {
+            margin-top: 20px;
+        }
+        & .select-title {
+            text-align: right;
+            margin-bottom: 3px;
+        }
+        & select {
+            appearance: none;
+            border: 1px solid $gray-800;
+            width: 100%;
+            padding: 7.5px 10px;
+            background-color: transparent;
+            background-image: url(../../assets/images/icons/select.svg);
+            background-repeat: no-repeat;
+            background-position: center right 10px;
+            font-size: 13px;
+            @include tablet {
+                padding: 9.5px 10px;
+            }
+        }
+    }
+    & .product-more {
+        margin-top: 34px;
+        display: flex;
+        & a {
+            color: $gray-800;
+        }
+    }
+}
