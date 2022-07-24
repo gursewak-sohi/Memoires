@@ -478,6 +478,10 @@ main.home-page {
   transform: rotate(-180deg);
 }
 
+button {
+  font-family: "Karla", sans-serif;
+}
+
 .btn-primary {
   border: 1px solid #4F4B47;
   background-color: #4F4B47;

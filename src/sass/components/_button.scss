@@ -1,4 +1,8 @@
 //  Button SCSS
+button {
+    font-family: $font-karla;
+}
+
 .btn-primary {
     border: 1px solid $gray-800;
     background-color: $gray-800;
