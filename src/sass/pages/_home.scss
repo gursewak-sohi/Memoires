@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     @include tablet {
-        flex: initial;
         padding: 56px 34px 60px;
         border-bottom: 1px solid rgba($gray-800, 30%);
     }

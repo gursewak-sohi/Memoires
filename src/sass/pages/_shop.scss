@@ -16,6 +16,10 @@
         padding: 52px 34px;
     }
     @include mobile {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    @include xs-mobile {
         grid-template-columns: 1fr;
     }
 }
@@ -34,6 +38,12 @@
         @include tablet {
             height: 414px;
             margin-bottom: 13px;
+        }
+        @include mobile {
+            height: 282px;
+        }
+        @include xs-mobile {
+            height: 414px;
         }
         & img {
             width: 100%;
